@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MenuActivity">
+
+    <Button
+        android:id="@+id/newgame"
+        android:layout_width="144dp"
+        android:layout_height="0dp"
+        android:layout_marginTop="65dp"
+        android:layout_marginBottom="74dp"
+        android:onClick="NewGame"
+        android:text="新游戏"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/level"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/level"
+        android:layout_width="144dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="74dp"
+        android:onClick="ChangeLevel"
+        android:text="更换难度"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/record"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/newgame"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/record"
+        android:layout_width="144dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="74dp"
+        android:onClick="Record"
+        android:text="游戏记录"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/exit"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/level" />
+
+    <Button
+        android:id="@+id/exit"
+        android:layout_width="144dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="56dp"
+        android:onClick="Return1"
+        android:text="返回"
+        android:textSize="25dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/record"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

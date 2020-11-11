@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/line1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:ignore="InvalidId,MissingConstraints">
+
+        <Button
+            android:id="@+id/newgame"
+            android:layout_width="94dp"
+            android:layout_height="51dp"
+            android:layout_marginRight="100dp"
+            android:background="@drawable/unselected"
+            android:onClick="Menu"
+            android:text="菜单"
+            android:textSize="20dp"
+            tools:ignore="DuplicateIds,OnClick" />
+
+        <TextView
+            android:id="@+id/mine"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/newgame"
+            android:text="剩余雷数："
+            android:textSize="25dp" />
+
+        <TextView
+            android:id="@+id/minecount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/mine"
+            android:text="00"
+            android:textSize="25dp" />
+    </RelativeLayout>
+
+    <GridLayout
+        android:id="@+id/mines"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/line2"
+        android:layout_below="@+id/line1"
+        android:layout_centerInParent="true"
+        android:columnCount="12"
+        android:rowCount="12"></GridLayout>
+
+    <RelativeLayout
+        android:id="@+id/line2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true">
+
+        <Button
+            android:id="@+id/open"
+            android:layout_width="94dp"
+            android:layout_height="51dp"
+            android:layout_alignParentLeft="true"
+            android:layout_marginRight="30dp"
+            android:background="@drawable/openbtn"
+            android:text="翻开"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/open"
+            android:gravity="bottom"
+            android:text="时间："
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/time1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="30dp"
+            android:layout_toRightOf="@+id/time"
+            android:text="00:00:00"
+            android:textSize="20dp" />
+
+        <Button
+            android:id="@+id/flag"
+            android:layout_width="94dp"
+            android:layout_height="51dp"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@+id/time1"
+            android:background="@drawable/flagbtn"
+            android:text="标记"
+
+            android:textSize="20dp"
+            tools:ignore="InvalidId" />
+    </RelativeLayout>
+</RelativeLayout>
